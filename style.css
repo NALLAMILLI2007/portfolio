@@ -5,7 +5,6 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     text-align: center;
-    margin-top: 100px;
 }
 
 h1 {
@@ -105,9 +104,64 @@ button:hover {
     background-color: #0097a7;
 }
 nav {
-    
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+/* Mobile Navigation */
+
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    #nav-links.active {
+        display: flex;
+    }
+}
+/* Dark Mode */
+
+body.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode p {
+    color: white;
+}
+
+body.dark-mode nav {
+    background-color: #111;
+}
+
+body.dark-mode nav a {
+    color: white;
+}
+/* Scroll Animation */
+
+.animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.animate.show {
+    opacity: 1;
+    transform: translateY(0);
 }
