@@ -249,4 +249,24 @@ body.dark-mode nav a {
     font-size: 16px;
     line-height: 1.5;
 }
-    
+.social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.social-links a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.05);
+}
